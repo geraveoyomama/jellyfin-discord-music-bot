@@ -1,6 +1,6 @@
 FROM node:18-alpine
 RUN apk add ffmpeg
-
+ENV MAX_VOLUME=100
 COPY . /app
 WORKDIR /app
 

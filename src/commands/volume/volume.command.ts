@@ -47,7 +47,7 @@ export class VolumeCommand {
       return;
     }
 
-    const volume = dto.volume / 100;
+    const volume = (dto.volume / 100) * (process.env.MAX_VOLUME / 100);
 
     this.logger.debug(
       `Calculated volume ${volume} from dto param ${dto.volume}`,
